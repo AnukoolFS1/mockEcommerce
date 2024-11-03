@@ -1,17 +1,18 @@
 const Header2 = () => {
-    const productCategory = ["Fresh", "MxPlayer", "Sell", "Best Sellers", "Today's Deals", "Mobiles", "Electronics", "Home & Kitchen", "Customer Service", "Prime", "New Releases", "Amazon Pay", "Fashion", "Car & Motorbike", "Computers"]
+    const productCategory = ["Fresh", "Best Sellers", "Today's Deals", "Mobiles", "Electronics", "Home & Kitchen", "Customer Service", "Prime", "New Releases" ,"Fashion", "Car & Motorbike", "Computers"]
 
-
+    const style = {
+        display: "flex",
+        backgroundColor: "#232f3e",
+        color: "white",
+        gap: "1rem",
+        fontSize: '.9rem',
+        padding:"0px 1rem"
+    }
 
     return (
-        <nav style={{
-            display: "flex",
-            backgroundColor: "#232f3e",
-            color: "white",
-            gap: "1rem",
-            fontSize: '.9rem',
-        }}>
-            <div className="h2-nav"> all</div>
+        <nav style={style}>
+            <div className="h2-nav">All</div>
             {
                 productCategory.map((e, i) => {
                     return (
