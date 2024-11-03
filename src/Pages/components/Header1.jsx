@@ -18,7 +18,7 @@ const Header = () => {
                 <select name="searchCategory" id="searchCat" style={{flex:"1"}}>
                     <option value="All"> All </option>
                     {
-                        searchCat.map(e => (<option value={e}>{e}</option>))
+                        searchCat.map(e => (<option value={e} key={Math.random()*100}>{e}</option>))
                     }
                 </select>
                 <input type="text" placeholder='search'/>

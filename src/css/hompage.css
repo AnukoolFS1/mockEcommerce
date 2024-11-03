@@ -1,0 +1,17 @@
+.hero{
+    display: flex;
+    justify-content: center;
+}
+
+.card-base{
+    display: flex;
+    justify-content: center;
+    transform: translateY(-70px);
+    gap: 1rem;
+}
+
+.card-base .cards-h{
+    width: 20rem;
+    height: 25rem;
+    box-shadow: 1px -1px 15px rgba(79, 79, 79, 0.5);
+}
