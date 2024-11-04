@@ -6,8 +6,9 @@
 }
 
 .listing-card .img{
-    width: 16rem;
+    width: 16.099rem;
     height: 18rem;
+    border-right: 1px solid grey;
 } 
 
 .details{

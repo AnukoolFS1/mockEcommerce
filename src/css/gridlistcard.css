@@ -7,11 +7,11 @@
 
 .grid-list-card .img{
     width: 16rem;
-    height: 18rem;
+    height: 18.099rem;
     border-bottom: 1px solid grey;
 }
 
-.img img{
+.img > img{
     width: 16rem;
     height: 18rem;
     object-fit: cover;
