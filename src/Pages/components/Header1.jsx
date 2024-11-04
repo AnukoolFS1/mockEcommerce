@@ -1,11 +1,13 @@
 import '../../css/header.css'
 
 const Header = () => {
-
+    const Languages = ["English", "Hindi", "Gujrati", "Marathi", "Tamil", "telugu"]
     const searchCat = ["Appliances", "Fashion", "Sports", "Kids", "Electronics", "Books", "Furniture", "Beauty", "Mobiles", "Computers", "Luggage & Bags"]
     const style = {
         display: "flex",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
+        gap:"10px",
+        alignItems:"center",
         backgroundColor: "black",
         color: "white",
     }
@@ -24,7 +26,11 @@ const Header = () => {
                 <input type="text" placeholder='search'/>
                 <button>Search</button>
             </div>
-            <div className="h1-nav">language</div>
+            <div className="h1-nav">
+                <select name="" id="" style={{width:"10rem", height:"2rem"}}>
+                    {Languages.map((e, i) => (<option key={i}>{e}</option>))}
+                </select>
+            </div>
             <div className="h1-nav">sign in</div>
             <div className="h1-nav">return & orders</div>
             <div className="h1-nav">cart</div>

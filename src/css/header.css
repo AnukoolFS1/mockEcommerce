@@ -9,7 +9,7 @@
 .input {
     padding: 0 !important;
     display: flex;
-    align-items: stretch;
+    /* align-items: stretch; */
     border: 1px solid white;
     width: 700px;
     height: 40px;

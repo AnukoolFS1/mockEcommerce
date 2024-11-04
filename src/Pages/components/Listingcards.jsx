@@ -9,7 +9,7 @@ const Listingcards = ({name, price, discount}) => {
             <div className='details'>
                 <h1 className='name'>{name}</h1>
                 <span>rating</span>
-                <h1 className='price'>{price}<span>{discount}</span></h1>
+                <h1 className='price'>{price} <span>{discount}% discount</span></h1>
                 <div id="checkouts">
                     <button>Buy Now</button> <button>Add to Cart</button>
                 </div>
