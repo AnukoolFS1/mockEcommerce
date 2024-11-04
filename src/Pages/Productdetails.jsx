@@ -1,11 +1,24 @@
+import { useEffect, useState } from "react"
 import Aboutitems from "./components/AboutItems"
 import Detailtable from "./components/PrdctDtlTable"
 import Header from "./components/Header1"
 import Header2 from "./components/Header2"
+import { useParams } from "react-router-dom"
+import axios from "axios"
 import '../css/product.css'
 
 const Product = () => {
+    const param = useParams()
+    const [product, setProduct] = useState({})
 
+    useEffect(() => {
+        async function getData() {
+            const data = await axios.get(`https://6727aca3270bd0b9755346dc.mockapi.io/mockecom/productname/${param.id}`)
+            console.log(data.data)
+            setProduct(data.data)
+        }
+        getData()
+    }, [])
     return (
         <section>
             <div>
@@ -19,13 +32,13 @@ const Product = () => {
                 </div>
                 <div className="p-details">
                     <div>
-                        <h1>product name</h1>
+                        <h1>{product.name}</h1>
                         <span>rating</span>
                         <span>reviews no.</span>
                     </div>
                     <div>
-                        <h1>Price</h1>
-                        <span>discount</span>
+                        <h1>{product.price}</h1>
+                        <span>{product.discount}</span>
                     </div>
                     <div>offers</div>
                     <div className="checkout">
@@ -33,10 +46,10 @@ const Product = () => {
                         <button>Add to cart</button>
                     </div>
                     <div>
-                        <Detailtable />
+                        <Detailtable material={product.reviews} />
                     </div>
                     <div>
-                        <Aboutitems />
+                        <Aboutitems details={product.details} />
                     </div>
                 </div>
             </section>

@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/products-result/" element={<PrdctListP />} />
-        <Route path="/product/" element={<Product />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
     </Router>
   )

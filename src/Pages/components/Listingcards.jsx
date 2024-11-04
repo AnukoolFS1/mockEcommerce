@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import '../../css/listingcards.css'
 
-const Listingcards = ({name, price, discount}) => {
+const Listingcards = ({name, price, discount, id}) => {
+    const navigate = useNavigate()
+
     return (
-        <article className="listing-card">
+        <article className="listing-card" onClick={() => navigate(`/product/${id}`)}>
             <div className='img'>
                 <img src="https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
             </div>

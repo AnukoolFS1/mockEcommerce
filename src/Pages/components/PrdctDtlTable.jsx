@@ -1,14 +1,18 @@
-const Detailtable = () => {
+const Detailtable = ({material}) => {
+
+
+
+
     return (
         <table>
             <tbody>
                 <tr>
                     <th>Brand</th>
-                    <td></td>
+                    <td>Lorem Ispum</td>
                 </tr>
                 <tr>
                     <th>Product Dimension</th>
-                    <td></td>
+                    <td>30 x 28 x 90</td>
                 </tr>
                 <tr>
                     <th>Color</th>
@@ -16,7 +20,7 @@ const Detailtable = () => {
                 </tr>
                 <tr>
                     <th>Material</th>
-                    <td></td>
+                    <td>{material}</td>
                 </tr>
                 <tr>
                     <th>Size</th>

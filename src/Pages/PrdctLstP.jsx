@@ -33,10 +33,10 @@ const PrdctListP = () => {
                     {
                         cardlayout?
                             products.length > 0?
-                            products?.map(e => ( <Listingcards key={e.id} name={e.name} price={e.price} details={e.details} discount={e.discount} material={e.reviews} />)):
+                            products?.map(e => ( <Listingcards key={e.id} id={e.id} name={e.name} price={e.price} details={e.details} discount={e.discount} material={e.reviews} />)):
                             null:
                         products.length > 0?
-                        products?.map(e => ( <Gridlstcard key={e.id} name={e.name} price={e.price} details={e.details} discount={e.discount} material={e.reviews} />)):
+                        products?.map(e => ( <Gridlstcard key={e.id} id={e.id} name={e.name} price={e.price} details={e.details} discount={e.discount} material={e.reviews} />)):
                         null
                     }
 
