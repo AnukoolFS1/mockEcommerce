@@ -32,13 +32,14 @@ const Product = () => {
                 </div>
                 <div className="p-details">
                     <div>
-                        <h1>{product.name}</h1>
+                        <h1 className="name">{product.name}</h1>
                         <span>rating</span>
                         <span>reviews no.</span>
                     </div>
                     <div>
-                        <h1>{product.price}</h1>
-                        <span>{product.discount}</span>
+                        <h1 className="price">{product.price}</h1>
+                        <span>{(product.price * (100/(100-product.discount))).toFixed(2)}</span>
+                        <span className="dis">{product.discount}% discount </span>
                     </div>
                     <div>offers</div>
                     <div className="checkout">
@@ -49,6 +50,7 @@ const Product = () => {
                         <Detailtable material={product.reviews} />
                     </div>
                     <div>
+                        <h1>About this item</h1>
                         <Aboutitems details={product.details} />
                     </div>
                 </div>

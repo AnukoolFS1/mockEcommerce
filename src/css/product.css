@@ -1,16 +1,23 @@
-.product{
+.product {
     border: 1px solid black;
     display: flex;
 }
 
-.product > .p-image{
+.product>.p-image {
     border: 1px solid blue;
     width: 50%;
     height: 80vh;
 }
 
-.product > .p-details{
-    padding: 0px .5rem;
+.product>.p-image>img {
+    width: 100%;
+    height: 80vh;
+    object-position: top;
+    object-fit: cover;
+}
+
+.product>.p-details {
+    padding: 1rem;
     display: flex;
     flex: 1;
     flex-flow: column;
@@ -18,10 +25,46 @@
     gap: 2.5rem;
 }
 
-.product > .p-details > div{
-    border-bottom: 1px solid #808080 ;
+.product>.p-details>div {
+    border-bottom: 1px solid #8080806e;
 }
 
-th,td{
+.p-details .checkout {
+    display: flex;
+    gap: 10px;
+}
+
+.p-details .checkout button {
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: chocolate;
+    cursor: pointer;
+}
+
+.p-details .name,
+.p-details .price {
+    font-size: 2.5rem;
+}
+
+.p-details .price + span{
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.dis{
+    color: rgb(75, 75, 75);
+
+}
+
+.product>.p-details ul {
+    margin-left: 1.5rem;
+}
+
+th,
+td {
     text-align: start;
 }

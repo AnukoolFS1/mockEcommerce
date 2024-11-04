@@ -16,7 +16,7 @@ const Detailtable = ({material}) => {
                 </tr>
                 <tr>
                     <th>Color</th>
-                    <td></td>
+                    <td>random</td>
                 </tr>
                 <tr>
                     <th>Material</th>
@@ -24,7 +24,7 @@ const Detailtable = ({material}) => {
                 </tr>
                 <tr>
                     <th>Size</th>
-                    <td></td>
+                    <td>Medium</td>
                 </tr>
             </tbody>
         </table>
