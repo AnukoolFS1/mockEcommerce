@@ -12,8 +12,8 @@ const Product = () => {
                 <Header />
                 <Header2 />
             </div>
-            <section className="product">
 
+            <section className="product">
                 <div className="p-image">
                     <img src="" alt="" />
                 </div>
@@ -28,6 +28,10 @@ const Product = () => {
                         <span>discount</span>
                     </div>
                     <div>offers</div>
+                    <div className="checkout">
+                        <button>Buy now</button>
+                        <button>Add to cart</button>
+                    </div>
                     <div>
                         <Detailtable />
                     </div>
