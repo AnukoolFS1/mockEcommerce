@@ -1,8 +1,13 @@
+import Aboutitems from "./components/AboutItems"
+import Detailtable from "./components/PrdctDtlTable"
+
 const Product = () => {
 
     return (
         <section>
-            <div className="p-image"></div>
+            <div className="p-image">
+                <img src="" alt="" />
+            </div>
             <div className="p-details">
                 <div>
                     <h1>product name</h1>
@@ -15,7 +20,10 @@ const Product = () => {
                 </div>
                 <div>offers</div>
                 <div>
-                    
+                    <Detailtable />
+                </div>
+                <div>
+                    <Aboutitems />
                 </div>
             </div>
         </section>
