@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import '../../css/listingcards.css'
 
-const Listingcards = ({name, price, discount, id}) => {
+const Listingcards = ({ name, price, discount, id }) => {
     const navigate = useNavigate()
 
     return (
@@ -14,7 +14,7 @@ const Listingcards = ({name, price, discount, id}) => {
                 <span>rating</span>
                 <h1 className='price'>{price} <span>{discount}% discount</span></h1>
                 <div id="checkouts">
-                    <button>Buy Now</button> <button>Add to Cart</button>
+                    <button onClick={() => navigate('/checkout')}>Buy Now</button> <button>Add to Cart</button>
                 </div>
             </div>
         </article>

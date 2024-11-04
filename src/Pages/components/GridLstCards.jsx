@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import '../../css/gridlistcard.css'
 
-const Gridlstcard = ({name, price, discount, id}) => {
+const Gridlstcard = ({ name, price, discount, id }) => {
     const navigate = useNavigate();
     return (
         <article className="grid-list-card" onClick={() => navigate(`/product/${id}`)}>
