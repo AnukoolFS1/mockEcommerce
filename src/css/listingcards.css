@@ -8,16 +8,16 @@
 .listing-card .img{
     width: 16rem;
     height: 18rem;
-    border: 1px solid red;
-}
+} 
 
 .details{
-    border: 1px solid blue;
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+    padding: 10px 10px;
+    overflow: hidden;
 }
 
 .details .name{
