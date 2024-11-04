@@ -1,0 +1,14 @@
+.Product-list{
+    display: flex;
+}
+
+.Product-list > section{
+    width: 100%;
+    display: flex;
+}
+
+.filter{
+    background-color: blue;
+    width: 300px;
+    height: 100vh;
+}

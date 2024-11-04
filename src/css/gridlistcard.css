@@ -1,0 +1,10 @@
+.grid-list-card{
+    border: 1px solid black;
+    align-self: start;
+}
+
+.grid-list-card .img{
+    width: 16rem;
+    height: 18rem;
+    border: 1px solid red;
+}

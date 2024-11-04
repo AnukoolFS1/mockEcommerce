@@ -1,16 +1,20 @@
+import '../../css/listingcards.css'
+
 const Listingcards = () => {
     return (
-        <div>
-            <img src="" alt="" />
-            <div>
-                <h1></h1>
+        <article className="listing-card">
+            <div className='img'>
+                <img src="" alt="" />
+            </div>
+            <div className='details'>
+                <h1 className='name'>Product Name</h1>
                 <span>rating</span>
-                <h1>Price <span>discount</span></h1>
+                <h1 className='price'>Price <span>discount</span></h1>
                 <div id="checkouts">
                     <button>Buy Now</button> <button>Add to Cart</button>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }
 
