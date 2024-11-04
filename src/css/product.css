@@ -19,7 +19,6 @@
     display: flex;
     flex: 1;
     flex-flow: column;
-    /* border: 1px solid black; */
     gap: 2.5rem;
 }
 
