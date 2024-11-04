@@ -11,10 +11,17 @@ const Product = () => {
     const param = useParams()
     const [product, setProduct] = useState({})
 
+    const offerStyle = {
+        alignSelf: "start",
+        padding: "20px",
+        borderRadius: "8px",
+        boxShadow:"1px 1px 5px #b1b1b1",
+        transform:"translateY(-8px)"
+    }
+
     useEffect(() => {
         async function getData() {
             const data = await axios.get(`https://6727aca3270bd0b9755346dc.mockapi.io/mockecom/productname/${param.id}`)
-            console.log(data.data)
             setProduct(data.data)
         }
         getData()
@@ -34,14 +41,19 @@ const Product = () => {
                     <div>
                         <h1 className="name">{product.name}</h1>
                         <span>rating</span>
-                        <span>reviews no.</span>
+                        <span> reviews </span>
                     </div>
                     <div>
                         <h1 className="price">{product.price}</h1>
-                        <span>{(product.price * (100/(100-product.discount))).toFixed(2)}</span>
+                        <span>{(product.price * (100 / (100 - product.discount))).toFixed(2)}</span>
                         <span className="dis">{product.discount}% discount </span>
                     </div>
-                    <div>offers</div>
+                    <div style={{display:"flex", gap:"1.5rem"}}>
+                        <div style={offerStyle}>offer1</div>
+                        <div style={offerStyle}>offer2</div>
+                        <div style={offerStyle}>offer3</div>
+                        <div style={offerStyle}>offer4</div>
+                    </div>
                     <div className="checkout">
                         <button>Buy now</button>
                         <button>Add to cart</button>

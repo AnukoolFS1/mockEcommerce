@@ -3,6 +3,7 @@
     align-self: start;
     width: 16rem;
     height: 30rem;
+    cursor: pointer;
 }
 
 .grid-list-card .img{

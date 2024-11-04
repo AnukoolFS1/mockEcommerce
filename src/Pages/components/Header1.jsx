@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import '../../css/header.css'
 
 const Header = () => {
+    const navigate = useNavigate()
     const Languages = ["English", "Hindi", "Gujrati", "Marathi", "Tamil", "telugu"]
     const searchCat = ["Appliances", "Fashion", "Sports", "Kids", "Electronics", "Books", "Furniture", "Beauty", "Mobiles", "Computers", "Luggage & Bags"]
     const style = {
@@ -24,7 +26,7 @@ const Header = () => {
                     }
                 </select>
                 <input type="text" placeholder='search'/>
-                <button>Search</button>
+                <button onClick={() => navigate('/products-result')}>Search</button>
             </div>
             <div className="h1-nav">
                 <select name="" id="" style={{width:"10rem", height:"2rem"}}>
