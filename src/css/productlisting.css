@@ -15,9 +15,10 @@
 }
 
 .filter{
-    background-color: blue;
     width: 300px;
     height: 100vh;
+    border-right: 1px solid grey ;
+    border-bottom: 1px solid grey ;
 }
 
 .details button{

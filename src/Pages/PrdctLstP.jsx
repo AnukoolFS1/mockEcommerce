@@ -6,11 +6,12 @@ import Filters from "./components/Filters";
 import Header from "./components/Header1";
 import Header2 from "./components/Header2";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const PrdctListP = () => {
     const [products, setProducts] = useState([])
     const [filtersSwitch, setFilter] = useState(true)
-    const [cardlayout, setCardlayout] = useState(true)
+    const cardlayout = useSelector(state => state.layout.state)
 
 
     useEffect(() => {
@@ -24,7 +25,7 @@ const PrdctListP = () => {
         <section>
             <Header />
             <Header2 />
-            <section className="Product-list" onClick={() => setCardlayout(!cardlayout)}>
+            <section className="Product-list" >
 
                 <Filters display={filtersSwitch ? "block" : "none"} />
                 <section style={{ padding: "8px 8px 8px 8px", flexDirection:cardlayout?"column":"row", flexWrap:"wrap"}}>

@@ -15,7 +15,7 @@ const Product = () => {
 
             <section className="product">
                 <div className="p-image">
-                    <img src="" alt="" />
+                    <img src="https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                 </div>
                 <div className="p-details">
                     <div>
