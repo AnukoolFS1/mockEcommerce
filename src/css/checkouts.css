@@ -56,13 +56,30 @@
     width: 1.2rem;
 }
 
-.address input[type="text"] {
+.address input[type="text"],
+.payments input[type="text"],
+.payments input[type="number"] {
     width: 20rem;
     height: 2rem;
     font-size: 1rem;
     font-family: calibri;
 }
 
-.checkout tr{
+.checkout tr {
     margin-bottom: 5vh;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.payments {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payments>div>div {
+    padding: 8px 1rem;
 }

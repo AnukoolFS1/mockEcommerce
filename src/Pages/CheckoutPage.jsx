@@ -6,14 +6,17 @@ import { useSelector } from "react-redux"
 import '../css/checkouts.css'
 import { useState } from "react"
 import CheckoutInput from "./components/CheckoutInputs"
+import Payment from "./components/Payment"
 
 
 const Checkout = () => {
     const params = useParams();
     const product = useSelector(state => state.product.product);
+    const paymentMode = useSelector(state => state.paymentMode.paymentMode)
     const [address, setAddress] = useState(true)
+    const [pay, setPay] = useState(true)
 
-    console.log(product)
+
     return (
         <section className="checkout">
             <h1 style={{
@@ -34,7 +37,12 @@ const Checkout = () => {
                                     <CheckoutInput display={address ? "flex" : "none"} />
                                 </td>
                             </tr>
-                            <Deliverytable th={"Payment Method"} value={"Cash On Delivery"} />
+                            <Deliverytable th={"Payment Method"} value={paymentMode} setState={setPay}/>
+                            <tr>
+                                <td colSpan={2}>
+                                    <Payment display={pay?"flex": "none"} />
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
