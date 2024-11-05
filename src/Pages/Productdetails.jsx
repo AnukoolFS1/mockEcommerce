@@ -6,8 +6,11 @@ import Header2 from "./components/Header2"
 import { useNavigate, useParams } from "react-router-dom"
 import axios from "axios"
 import '../css/product.css'
+import { useDispatch } from "react-redux"
+import { productAction } from "../redux/ProductSlice"
 
 const Product = () => {
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const param = useParams()
     const [product, setProduct] = useState({})
@@ -18,6 +21,12 @@ const Product = () => {
         borderRadius: "8px",
         boxShadow: "1px 1px 5px #b1b1b1",
         transform: "translateY(-8px)"
+    }
+
+    const checkout = () => {
+        dispatch(productAction(product))
+        localStorage.setItem("product", JSON.stringify(product))
+        navigate('/checkout')
     }
 
     useEffect(() => {
@@ -56,8 +65,8 @@ const Product = () => {
                         <div style={offerStyle}>offer4</div>
                     </div>
                     <div className="checkout">
-                        <button onClick={() => navigate('/checkout')}>Buy now</button>
-                        <button onClick={() => navigate('/checkout')}>Add to cart</button>
+                        <button onClick={checkout}>Buy now</button>
+                        <button>Add to cart</button>
                     </div>
                     <div>
                         <Detailtable material={product.reviews} />
