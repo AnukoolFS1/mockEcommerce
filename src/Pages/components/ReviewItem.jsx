@@ -28,3 +28,5 @@ const Reviewitem = () => {
         </div>
     )
 }
+
+export default Reviewitem
