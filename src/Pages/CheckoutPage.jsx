@@ -3,6 +3,7 @@ import PaymentTable from "./components/Paymentmode"
 import Reviewitem from "./components/ReviewItem"
 import { useParams } from "react-router-dom"
 import { useSelector } from "react-redux"
+import '../css/reviewcard.css'
 
 
 const Checkout = () => {
