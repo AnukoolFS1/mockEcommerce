@@ -16,8 +16,8 @@ const Header = () => {
 
     return (
         <header style={style}>
-            <span className="h1-nav">Logo</span>
-            <div className="h1-nav">Location</div>
+            <span className="h1-nav">Brand Logo</span>
+            <div className="h1-nav">Delivery Location</div>
             <div className="h1-nav input">
                 <select name="searchCategory" id="searchCat" style={{flex:"1"}}>
                     <option value="All"> All </option>

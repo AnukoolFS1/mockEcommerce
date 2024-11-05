@@ -29,3 +29,30 @@
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+.phones{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: burlywood;
+    gap: 10px;
+    margin-bottom: 2rem ;
+    position: relative;
+}
+
+.phones h1{
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.phones img{
+    width: 11rem;
+    height: 20rem;
+    object-fit: cover;
+    cursor: pointer;
+}
