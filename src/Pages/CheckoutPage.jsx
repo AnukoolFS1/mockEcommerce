@@ -1,7 +1,5 @@
 import Deliverytable from "./components/DelilveryTable"
-import PaymentTable from "./components/Paymentmode"
 import Reviewitem from "./components/ReviewItem"
-import { useParams } from "react-router-dom"
 import { useSelector } from "react-redux"
 import '../css/checkouts.css'
 import { useState } from "react"
@@ -10,15 +8,17 @@ import Payment from "./components/Payment"
 
 
 const Checkout = () => {
-    const params = useParams();
+    const userAddress = useSelector(state => state.address.address)
     const product = useSelector(state => state.product.product);
     const paymentMode = useSelector(state => state.paymentMode.paymentMode)
     const [address, setAddress] = useState(true)
     const [pay, setPay] = useState(true)
 
-
+    const fullAddress = `${userAddress.address}
+    ${userAddress.pin}`
+    console.log(userAddress)
     return (
-        <section className="checkout">
+        <section className="checkout" >
             <h1 style={{
                 textAlign: "center",
                 padding: "20px",
@@ -31,10 +31,10 @@ const Checkout = () => {
                 <div className="table-div">
                     <table cellSpacing={"10px"}>
                         <tbody>
-                            <Deliverytable th={"Address"} value={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, quibusdam."} setState={setAddress} state={address} />
+                            <Deliverytable th={"Address"} value={fullAddress} setState={setAddress} state={address} />
                             <tr>
                                 <td colSpan={2}>
-                                    <CheckoutInput display={address ? "flex" : "none"} />
+                                    <CheckoutInput display={address ? "flex" : "none"} setAddress={setAddress} />
                                 </td>
                             </tr>
                             <Deliverytable th={"Payment Method"} value={paymentMode} setState={setPay}/>

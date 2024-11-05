@@ -26,6 +26,7 @@ const Reviewitem = ({ product }) => {
                     <h1>{data.name}</h1>
                     <h1><span style={{ textDecoration: "line-through", color: "grey" }}>{(data.price * (100 / (100 - data.discount))).toFixed(2)} </span>{data.price}</h1>
                     <h1>QTY <button onClick={decreaseQty}> - </button> {qty} <button onClick={increaseQty}> + </button></h1>
+                    <button>Place Order</button>
                 </div>
             </div>
         </div>
