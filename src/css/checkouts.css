@@ -1,8 +1,8 @@
-.checkout{
+.checkouts {
     background-color: rgb(222, 222, 222);
 }
 
-.checkout>div {
+.checkouts>div {
     padding: 2rem 5rem;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@
     font-family: calibri;
 }
 
-.checkout tr {
+.checkouts tr {
     margin-bottom: 5vh;
 }
 

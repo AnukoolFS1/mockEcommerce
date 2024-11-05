@@ -18,7 +18,7 @@ const Checkout = () => {
     ${userAddress.pin}`
     console.log(userAddress)
     return (
-        <section className="checkout" >
+        <section className="checkouts" >
             <h1 style={{
                 textAlign: "center",
                 padding: "20px",

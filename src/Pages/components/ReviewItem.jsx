@@ -1,9 +1,11 @@
 import { useState } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
-
-const Reviewitem = ({ product }) => {
+const Reviewitem = () => {
     const data = JSON.parse(localStorage.getItem("product"))
     const [qty, setQty] = useState(1)
+    const navigate = useNavigate()
 
     const decreaseQty = () => {
         if (qty > 1) {
@@ -13,6 +15,10 @@ const Reviewitem = ({ product }) => {
 
     const increaseQty = () => {
         setQty(p => p + 1)
+    }
+
+    const placeOrder = () => {
+            navigate('/processing')
     }
 
     return (
@@ -26,7 +32,7 @@ const Reviewitem = ({ product }) => {
                     <h1>{data.name}</h1>
                     <h1><span style={{ textDecoration: "line-through", color: "grey" }}>{(data.price * (100 / (100 - data.discount))).toFixed(2)} </span>{data.price}</h1>
                     <h1>QTY <button onClick={decreaseQty}> - </button> {qty} <button onClick={increaseQty}> + </button></h1>
-                    <button>Place Order</button>
+                    <button onClick={placeOrder}>Place Order</button>
                 </div>
             </div>
         </div>
