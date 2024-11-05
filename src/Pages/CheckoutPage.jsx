@@ -1,7 +1,8 @@
 const Checkout = () => {
     return (
         <section>
-            <h1>Enter your details</h1>
+            <h1>Checkout</h1>
+            
         </section>
     )
 }
