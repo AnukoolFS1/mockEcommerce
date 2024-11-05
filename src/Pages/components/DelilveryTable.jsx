@@ -1,13 +1,16 @@
-const Deliverytable = () => {
+const Deliverytable = ({ th, value, setState, state }) => {
     return (
-        <table>
-            <tbody>
+        
+            
                 <tr>
-                    <th>Delivery Address</th>
-                    <td>address</td>
+                    <th>{th}</th>
+                    <td>
+                        <p>{value}</p>
+                    </td>
+                        <td className="change" onClick={() => setState(p => !p)}>{state ? "Cancel" : "Change"}</td>
                 </tr>
-            </tbody>
-        </table>
+            
+        
     )
 }
 

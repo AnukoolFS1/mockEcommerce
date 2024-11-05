@@ -1,13 +1,12 @@
 const PaymentTable = () => {
     return (
-        <table>
-            <tbody>
+        
                 <tr>
-                    <th>Delivery Address</th>
-                    <td>address</td>
+                    <th>Payment Method</th>
+                    <td>Cash On Delivery</td>
+                    <td>Change</td>
                 </tr>
-            </tbody>
-        </table>
+           
     )
 }
 
