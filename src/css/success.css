@@ -1,0 +1,36 @@
+.success{
+    height: 90vh;
+    display: grid;
+    place-items: center;
+}
+
+.loader {
+    height: 200px;
+    width: 200px;
+    border: 20px solid transparent;
+    border-radius: 50%;
+    border-top: 20px solid cornflowerblue;
+    border-bottom: 20px solid cornflowerblue;
+    animation: loader 1s infinite linear;
+}
+
+.status-green{
+    color:white;
+    background-color: yellowgreen;
+    padding: 7rem 1rem;
+    border-radius: 50%;
+}
+
+.status-green h1{
+    text-align: center;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
